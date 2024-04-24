@@ -14,3 +14,9 @@ jobs:
 
     - name: Build
       run: aarch64-linux-gnu-gcc -o chall chall.S
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: compiled-binary
+        path: chall
